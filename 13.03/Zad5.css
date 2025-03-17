@@ -1,0 +1,19 @@
+.box-parent > h1 {color: lightgray}
+            .box-parent {
+                background-color: black;
+                width:fit-content;
+                height: fit-content;
+                padding-right: 30px;
+                padding-bottom: 30px;
+            }
+            .box-child {
+                width: 200px; 
+                height: 200px;
+            }
+            .box-child:nth-of-type(1) {
+                background-color: red;
+            }
+            .box-child:nth-of-type(2) {
+                margin-top: 15px;
+                background-color: blue;
+            }

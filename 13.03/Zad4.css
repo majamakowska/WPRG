@@ -1,0 +1,4 @@
+div {background-color: whitesmoke;}
+div > div {color: black;}
+div > div > div {color: red; font-size: 0.8em;}
+div > div + div + div + div {color: red; font-size: 1em;} 
