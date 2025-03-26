@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zadanie 4</title>
+        <link href="Zad4.css" rel="stylesheet" type="text/css">
+        <style>
+            .container { 
+                position: relative; 
+                height: 200px;
+            }
+            .box {
+                width: 100%;
+                height: 50%;
+                position: relative;
+            }
+            .white-blok {
+                background-color: white;
+                z-index: 3;
+            }
+            .red-block {
+                background-color: red;
+                z-index: 1;
+            }
+            .orange-text {
+                color: orange;
+                z-index: 2;
+                position: relative;
+                bottom: 108%;
+                text-align: center;
+                line-height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="container"> 
+                <div class="box white-block"></div> 
+                <div class="box red-block"></div> 
+                <p class="orange-text">Hello world!</p> 
+            </div> 
+    </body>
+</html>
