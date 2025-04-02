@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zadanie 3</title>
+        <style>
+            .row {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+            .equal-width {
+                flex: 1;
+                text-align: center;
+                background-color: lightblue;
+                padding: 25px;
+            }
+            .row2 {
+                display: flex;
+                gap: 10px;
+            }
+            .fixed-percentage {
+                width: 40%;
+                text-align: center;
+                background-color: lightblue;
+                padding: 25px;
+            }
+            .flexible {
+                flex: 1;
+                text-align: center;
+                background-color: lightblue;
+                padding: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "row">
+            <div class = "equal-width">Element 1</div>
+            <div class = "equal-width">Element 2</div>
+            <div class = "equal-width">Element 3</div>
+        </div>
+        <div class = "row2">
+            <div class = "fixed-percentage">Element 4</div>
+            <div class = "flexible">Element 5</div>
+        </div>
+    </body>
+</html>
