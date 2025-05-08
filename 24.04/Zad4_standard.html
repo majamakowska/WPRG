@@ -1,31 +1,23 @@
-<?php
-if (!file_exists("./licznik.txt")) {
-    $liczbaOdwiedzin = 1;
-} else {
-    $liczbaOdwiedzin = (int)file_get_contents("./licznik.txt");
-    $liczbaOdwiedzin++;
-}
-file_put_contents("./licznik.txt", $liczbaOdwiedzin);
-?>
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zadanie 3</title>
+    <title>Zadanie 4</title>
     <style>
         body {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #5158BB;
+            background: #D90368;
             height: 100vh;
             margin: 0;
         }
         .box {
             display: flex;
+            flex-direction: column;
             font-family: sans-serif;
-            font-size: x-large;
-            color: #FAFAFF;
+            font-size: large;
+            color: #F1E9DA;
             align-items: center;
             justify-content: center;
             background: #1C1D21;
@@ -35,10 +27,9 @@ file_put_contents("./licznik.txt", $liczbaOdwiedzin);
     </style>
 </head>
 <body>
-<div class="box">
-<?php
-echo "<p>Liczba odwiedzin: $liczbaOdwiedzin</p>";
-?>
+<div class="box standard" id = "standard">
+    <h1>Witaj na naszej stronie!</h1>
+    <p>Normalna strona.</p>
 </div>
 </body>
 </html>
