@@ -11,8 +11,8 @@ if ($fd = fopen("./selectedIPs.txt", "r")) {
     fclose($fd);
 }
 if (in_array($userIP, $selectedIPs)) {
-    include("Zad4_special.html");
+    include("Zad5_special.html");
 } else {
-    include("Zad4_standard.html");
+    include("Zad5_standard.html");
 }
 ?>
