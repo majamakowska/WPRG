@@ -16,6 +16,6 @@ $totalResult = $db->runQuery("SELECT COUNT(*) as total FROM posts WHERE user_id 
 $total = $totalResult->fetch_assoc()["total"];
 ?>
 <div class = top_profile>
-<img class="pfp" src='<?php echo $pfp; ?>' alt="Zdjęcie profilowe"><h2><?php echo $username; if (ProfileClass::ownProfile()) :?> <a class="edit" title="Edytuj profil" href="../index.php?<?php echo $_SESSION['last_query'];?>&action=edit_profile">⚙</a><?php endif;?></h2>
+<img class="pfp" src='<?php echo $pfp; ?>' alt="Zdjęcie profilowe"><h2><?php echo $username; if (ProfileClass::ownProfile()) :?> <a class="edit" title="Edytuj profil" href="index.php?<?php echo $_SESSION['last_query'];?>&action=edit_profile">⚙</a><?php endif;?></h2>
 </div>
 <?php Renderer::renderPosts($db, $posts, $total,"");?>

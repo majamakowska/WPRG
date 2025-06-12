@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php if ($username_already_exists): ?>
                     <p><strong>*<strong> Ta nazwa jest już zajęta.</p>
                 <?php endif; ?>
-                <p class="reset_message">Kliknij tutaj, żeby zresetować hasło ➜ <a class="reset_link" href="../index.php?section=profile&user_id=<?php echo $user_id ?>&action=reset_password">Zresetuj hasło</a></p>
+                <p class="reset_message">Kliknij tutaj, żeby zresetować hasło ➜ <a class="reset_link" href="index.php?section=profile&user_id=<?php echo $user_id ?>&action=reset_password">Zresetuj hasło</a></p>
                 <div class="options">
                     <button class="cancel" type="submit" name="cancel">Anuluj</button>
                     <button class="save" type="submit" name="save">Zapisz zmiany</button>

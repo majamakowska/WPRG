@@ -2,6 +2,12 @@
 if (!isset($_SESSION['user_id'])) {
     die("Zaloguj się, aby uzyskać dostęp do tej strony.");
 }
+
+parse_str($_SESSION['last_query'], $queryArray);
+unset($queryArray['action']);
+$cleanQuery = http_build_query($queryArray);
+$targetURL = Renderer::buildUrlWithParams($queryArray, ["action" => "edit_profile"]);
+
 $wrong_password = false;
 $mismatched_password = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $db->runQuery("UPDATE users SET password=? WHERE id=?", [$new_password, $_SESSION['user_id']]);
         }
     }
-    header("Location: index.php?section=support");
+    header("Location: $targetURL");
     exit();
 }
 ?>
