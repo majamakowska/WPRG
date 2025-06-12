@@ -6,7 +6,11 @@ if (isset($_GET["post_id"])) {
     $post_id = $_GET["post_id"];
     $postAuthorResult = $db->runQuery("SELECT user_id FROM posts WHERE id = ?", [$post_id]);
     $postAuthor = $postAuthorResult->fetch_assoc()["user_id"];
-    if ($role !== "admin" && $role !== "modr" || !isset($_SESSION["user_id"]) || $postAuthor != $_SESSION["user_id"]) {
+
+    $privilegedRole = $role === "admin" || $role === "mod";
+    $isAuthor = $postAuthor !== null && $_SESSION["user_id"] === $postAuthor;
+
+    if (!isset($_SESSION["user_id"]) || !($privilegedRole || $isAuthor)) {
         die("<p>Nie możesz wykonać tej akcji.<p>");
     }
 

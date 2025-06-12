@@ -36,7 +36,7 @@ if (isset($_GET["comment_id"])) {
         <div class="form_box">
             <h1>Edytuj post</h1>
             <form class = standard_form method='POST' action=''>
-                <input type="hidden" name="comment-id" value="<?php echo $comment_id; ?>">
+                <input type="hidden" name="comment_id" value="<?php echo $comment_id; ?>">
                 <label for="edit_comment_content"></label><textarea id="edit_comment_content" name = "content" required><?php echo $content; ?></textarea>
                 <div class="options">
                     <button class="cancel" type="submit" formnovalidate name="cancel">Anuluj</button>

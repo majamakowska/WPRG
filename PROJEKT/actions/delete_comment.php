@@ -13,9 +13,6 @@ if (isset($_GET["comment_id"])) {
         die("<p>Nie możesz wykonać tej akcji.</p>");
     }
 
-    if (!($role === "admin" || $role === "mod" || $commentAuthor == $_SESSION["user_id"])) {
-        die("<p>Nie możesz wykonać tej akcji.<p>");
-    }
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         parse_str($_SESSION['last_query'], $queryParams);
         unset($queryParams['action'], $queryParams['comment_id']);

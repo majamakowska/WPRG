@@ -54,6 +54,9 @@
 .subject {
     color: #234E87;
     margin: 10px 0 auto;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
 }
 .subject a {
     color: #234E87;
