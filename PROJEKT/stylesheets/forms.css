@@ -1,0 +1,175 @@
+.form_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: #F4EDE5;
+    color: #79100A;
+    border-radius: 20px;
+    max-height: 95%;
+}
+.standard_form {
+    width: 100%;
+    border-radius: 20px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    max-height: inherit;
+    gap: 10px;
+}
+label {
+    font-weight: bold;
+}
+.standard_form label {
+    margin-left: 20px;
+}
+select {
+    min-width: fit-content;
+}
+input:not([type="file"]), select {
+    color: #111D4A;
+    background: #FFF8F0;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin: 0 10px 0 10px;
+}
+input:not([type="file"]):focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #F0E9E1;
+}
+.standard_form input:not([type="file"]), .standard_form select {
+    margin: 0 20px 0 20px;
+}
+textarea {
+    min-width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    min-height: fit-content;
+    max-height: 40vh;
+    height: 25vh;
+    border: none;
+    padding: 10px;
+    background: #FFF8F0;
+    color: #111D4A;
+}
+.options {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    align-content: space-around;
+    justify-content: center;
+    margin: 0 10px 10px 10px;
+}
+.options button {
+    width: 25%;
+    margin: 10px auto;
+}
+.save {
+    background: #85BC88;
+    color: #0A7910;
+    transition: all 0.2s ease-in-out;
+}
+.save:hover {
+    background: #6DBF72;
+    color: white;
+    text-shadow: 0 0 3px white, 0 0 6px white;
+    box-shadow: 0 0 4px #6DBF72, 0 0 8px #6DBF72;
+}
+.cancel {
+    background: #A1A1A1;
+    color: #424242;
+}
+.cancel:hover {
+    background: #B5B5B5;
+    color: #2C2C2C;
+}
+.delete {
+    background: #C98A86;
+    color: #92140C;
+    transition: all 0.2s ease-in-out;
+}
+.delete:hover {
+    background: #DC7873;
+    color: white;
+    text-shadow: 0 0 3px white, 0 0 6px white;
+    box-shadow: 0 0 4px #DC7873, 0 0 8px #DC7873;
+}
+.other {
+    background: #B3A8C1;
+    color: #675182;
+}
+.other:hover {
+    background: #C4B8D0;
+    color: #4E3A66;
+}
+.admin_panel {
+    height: 100%;
+    width: 75%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.admin_panel .section {
+    background: #F4EDE5;
+    color: #234E87;
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.admin_panel .section h2 {
+    margin: 0;
+}
+.admin_panel form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px 20px;
+}
+.admin_panel input, .admin_panel select {
+    min-width: 200px;
+}
+input[type="file"] {
+    color: #111D4A;
+    background: none;
+    border: none;
+    margin: 0 20px;
+    padding: 5px 0;
+}
+input[type="file"]::file-selector-button {
+    background-color: #FFF8F0;
+    color: #111D4A;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+form p {
+    margin: 0 0 0 20px;
+}
+.reset_message {
+    color: #2C2C2C;
+    font-weight: bold;
+    margin: 10px 20px 0 20px;
+}
+.reset_link {
+    color: #4f49ae;
+    text-decoration: none;
+}
+.reset_link:hover {
+    color: #140c92;
+}
+.standard_form input[type="checkbox"] {
+    margin: 0 10px 0 20px;
+}
+form .checkbox_label {
+    font-weight: normal;
+    margin-left: 0;
+}

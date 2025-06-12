@@ -1,0 +1,128 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    gap: 10px;
+    width: 50%;
+}
+.post_box {
+    background: #111D4A;
+    color: #FFF8F0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.post_box:hover {
+    box-shadow: #C0BAB4 0 0 5px 2px;
+}
+.post_header {
+    margin: 10px;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    width: 100%;
+}
+.post_header * {
+    color: #C8963E;
+    margin: auto;
+    padding: 0;
+}
+.post_header a {
+    color: #C8963E;
+}
+.post_header a:hover {
+    color: #e4cb9f;
+}
+.date {
+    font-style: italic;
+}
+.post_content {
+    background: #FFF8F0;
+    color: #111D4A;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.subject {
+    color: #234E87;
+    margin: 10px 0 auto;
+}
+.subject a {
+    color: #234E87;
+}
+.post_text {
+    margin: 10px 20px 15px 20px;
+}
+.post_footer {
+    margin: 10px;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    width: 100%;
+}
+.post_footer a, .comment_footer a {
+    margin: auto;
+    padding: 0;
+    color: #888B9D;
+}
+.post_footer a:hover {
+    color: #c4c5ce;
+}
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 90%;
+}
+.comment_box {
+    width: 100%;
+    background: #C4C5CE;
+    border-radius: 20px;
+}
+.comment_box:hover {
+    box-shadow: #C0BAB4 0 0 5px;
+}
+.comment_header {
+    margin: 10px;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    width: 100%;
+}
+.comment_header * {
+    color: #79100A;
+    margin: auto;
+    padding: 0;
+}
+.comment_content {
+    background: #FFF8F0;
+    color: #111D4A;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.comment_text {
+    margin: 10px 20px;
+}
+.comment_footer {
+    margin: 10px;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    width: 100%;
+}
+.comment_footer a:hover {
+    color: #666976;
+}
