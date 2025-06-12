@@ -1,5 +1,10 @@
 <?php
 $logged_in = isset($_SESSION['user_id']);
+
+if (isset($_COOKIE["pseudonim"])) {
+    $remembered_author = $_COOKIE["pseudonim"];
+}
+
 if (isset($_GET['post_id'])) {
     $post_id = $_GET['post_id'];
 }
@@ -16,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $user_id = null;
             $author = $_POST['author'];
+            setcookie("pseudonim", $author, time() + (86400 * 30), "/");
         }
         $datetime = (new DateTime())->format('Y-m-d H:i');
         $content = $_POST['content'];
@@ -31,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form class="standard_form" method="POST">
                 <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
                 <?php if(!$logged_in): ?>
-                    <label for="new_comment_author">Pseudonim:</label><input id="new_comment_author" name="author" required>
+                    <label for="new_comment_author">Pseudonim:</label><input id="new_comment_author" name="author" <?php if (isset($remembered_author)) echo "value=\"" . htmlspecialchars($remembered_author) . "\""?> required>
                 <?php endif; ?>
                 <label for="new_comment_content"></label><textarea id="new_comment_content" name="content" required></textarea>
                 <div class="options">
