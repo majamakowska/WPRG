@@ -11,11 +11,11 @@ class Post
     public function __construct($db, array $row)
     {
         $this->id = (int)$row['id'];
-        $this->user_id = htmlspecialchars($row['user_id']);
+        $this->user_id = ($row['user_id']);
         $this->datetime = (new DateTime($row['datetime']))->format('Y-m-d H:i');
-        $this->category_id = htmlspecialchars($row['category_id']);
-        $this->subject = htmlspecialchars($row['subject']);
-        $this->content = htmlspecialchars($row['content']);
+        $this->category_id = ($row['category_id']);
+        $this->subject = ($row['subject']);
+        $this->content = ($row['content']);
     }
     public function getId() {
         return $this->id;
