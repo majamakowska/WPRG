@@ -53,7 +53,8 @@
 }
 .subject {
     color: #234E87;
-    margin: 10px 0 auto;
+    text-align: center;
+    margin: 10px 20px auto;
     word-wrap: break-word;
     word-break: break-word;
     white-space: normal;
