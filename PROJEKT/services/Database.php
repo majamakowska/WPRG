@@ -13,10 +13,10 @@ class Database {
         return self::$instance;
     }
     private function connect() {
-        $servername = "127.0.0.1:3307";
-        $username = "root";
-        $password = "";
-        $dbname = "forum";
+        $servername = "szuflandia.pjwstk.edu.pl";
+        $username = "s32828";
+        $password = "Maj.Mako";
+        $dbname = "s32828";
 
         $connection = new mysqli($servername, $username, $password, $dbname);
 
