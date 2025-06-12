@@ -1,7 +1,7 @@
 <?php
-include("Database.php");
+include("services/Database.php");
 include("model/User.php");
-include "Renderer.php";
+include "services/Renderer.php";
 include("model/Post.php");
 include("model/Comment.php");
 include("model/Category.php");
